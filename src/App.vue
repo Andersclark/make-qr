@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 import QRCode from "qrcode";
 
@@ -15,7 +15,7 @@ async function onSubmit() {
     inputText.value = "";
 }
 
-async function makeQrCode(text: string){
+async function makeQrCode(text){
     try {
      return QRCode.toDataURL(text)
     } catch (err) {
@@ -23,7 +23,6 @@ async function makeQrCode(text: string){
       return ""
     }
 }
-
 </script>
 <template>
     <header><Transition><h1 v-show="showHeader">Make QR</h1></Transition></header>
