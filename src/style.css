@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 :root {
+  --color-primary: #69ffdb;
+  --color-secondary: hotpink;
+  --base-unit: 8px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -40,20 +43,20 @@ main {
 }
 
 input, button {
-  padding: 8px 24px;
+  padding: var(--base-unit) calc(var(--base-unit)*3);
   border-radius: 4px;
-  margin: 8px;
+  margin: var(--base-unit);
   font-size: large;
 
 }
 a {
-  color: #c869ff;
+  color: var(--color-primary);
 }
 a:visited {
-  color: #C869FFFF;
+  color: var(--color-secondary);
 }
 button {
-  background-color: hotpink;
+  background-color: var(--color-secondary);
   font-size: large;
   border: 1px solid transparent;
   font-weight: 500;
@@ -65,7 +68,7 @@ button:disabled {
 }
 button:focus-visible {
   border: none;
-  outline-color: #69ffdb;
+  outline-color: var(--color-primary);
 }
 input {
   font-size: large;
@@ -73,10 +76,12 @@ input {
 }
 input:focus-visible {
   border: none;
-  outline-color: #69ffdb;
+  outline-color: var(--color-primary);
 }
-pre {
-  font-size: large;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .col {
   display: flex;
@@ -86,5 +91,5 @@ pre {
   color: red;
 }
 .border-dash {
-  border: 1px dashed #69ffdb;
+  border: 1px dashed var(--color-primary);
 }

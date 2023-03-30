@@ -31,7 +31,7 @@ async function downloadFile(url: string, filename:string) {
       </div>
     </div>
   </div>
-  <form @submit.prevent="handleSubmit" id="make-form" class="col">
+  <form @submit.prevent="handleSubmit" id="make-form" class="row">
     <input v-model.trim="inputText" placeholder="Put text here" type="text" @focus="()=> $emit('focus')"/>
     <button type="submit" :disabled="inputText.length < 1" class="make-btn" @click.prevent="handleSubmit">Make</button>
   </form>
@@ -39,7 +39,7 @@ async function downloadFile(url: string, filename:string) {
 <style scoped>
 
 #make-form {
-  margin: 16px 32px;
+  margin: calc(var(--base-unit)*2) calc(var(--base-unit)*5);
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -75,6 +75,6 @@ async function downloadFile(url: string, filename:string) {
 }
 #qr-image:hover {
   cursor: pointer;
-  border: 2px hotpink;
+  border: var(--base-unit) solid var(--color-primary);
 }
 </style>
