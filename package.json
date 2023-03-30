@@ -7,7 +7,9 @@
     "dev": "vite",
     "serve": "vite --host",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npx eslint src",
+    "lintFix": "npx eslint src --fix"
   },
   "dependencies": {
     "qrcode": "^1.5.1",
@@ -15,7 +17,11 @@
   },
   "devDependencies": {
     "@types/qrcode": "^1.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-vue": "^9.10.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vue-tsc": "^1.0.24"

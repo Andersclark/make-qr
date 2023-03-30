@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "ignorePatterns": ["./.*","./public", "./dist", "./node_modules", "vite.config.ts"],
+  "rules": {
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "double"]
+  }
+}
