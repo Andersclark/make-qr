@@ -5,7 +5,7 @@ import makeQrCode from "../makeQrCode";
 defineEmits(["focus"])
 
 const inputText = ref("");
-const dataUrl = ref<null |string>(null)
+const dataUrl = ref()
 const codeText = ref("")
 const showImage = ref(false);
 
@@ -27,7 +27,7 @@ async function downloadFile(url: string, filename:string) {
   <div  id="result-container">
     <div id="qr-column">
       <div id="qr-image-wrapper" :class="!showImage && 'border-dash'">
-        <img v-show="dataUrl" id="qr-image" :src="dataUrl" ref="imgRef" :alt="`Outputted QR-code representing ${codeText}`" @click="() => downloadFile(dataUrl, 'qr.webp')"/>
+        <img v-show="!!dataUrl" id="qr-image" :src="dataUrl" ref="imgRef" :alt="`Outputted QR-code representing ${codeText}`" @click="() => downloadFile(dataUrl, 'qr.webp')"/>
       </div>
     </div>
   </div>
