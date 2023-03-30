@@ -8,6 +8,7 @@
     "serve": "vite --host",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
     "lint": "npx eslint src",
     "lintFix": "npx eslint src --fix"
   },
