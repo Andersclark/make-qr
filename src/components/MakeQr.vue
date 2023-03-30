@@ -64,14 +64,14 @@ async function downloadFile(url: string, filename:string) {
   width: 50vw;
   max-width: 240px;
   aspect-ratio: 1;
-  border-radius: 25px;
+  border-radius: calc(var(--base-unit)*2);
 }
 
 #qr-image {
   width: 50vw;
   max-width: 240px;
   aspect-ratio: 1;
-  border-radius: 25px;
+  border-radius: calc(var(--base-unit)*2);
 }
 #qr-image:hover {
   cursor: pointer;

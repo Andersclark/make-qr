@@ -3,7 +3,7 @@ import QRCode, {QRCodeToDataURLOptions} from "qrcode";
 const DEFAULT_OPTIONS: QRCodeToDataURLOptions = {
   errorCorrectionLevel: "H",
   type: "image/webp",
-  margin: 10,
+  margin: 3,
   scale: 10,
   width: undefined,
   color: {
