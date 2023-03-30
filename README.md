@@ -2,6 +2,6 @@
 
 An add- and tracking-free alternative to all those horrific QR-scanners I get in my Google-results.
 
-Try it at [HERE](https://make-qr-jr1i.vercel.app)
+Try it at [HERE](https://make-qr.vercel.app/)
 
-<img width="589" alt="image" src="https://user-images.githubusercontent.com/5709283/219952342-06fdebbe-70cc-4b95-9b21-027977345eaa.png">
+<img width="381" alt="image" src="https://user-images.githubusercontent.com/5709283/228958159-44782800-7b3a-46f6-b2bb-1e047729fe00.png">
