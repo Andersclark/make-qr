@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import {ref} from "vue";
 import makeQrCode from "../makeQrCode";
+import {addItem as saveItem, getStore} from "../services/storage";
 
 defineEmits(["focus"])
 
@@ -8,9 +9,16 @@ const inputText = ref("");
 const dataUrl = ref()
 const codeText = ref("")
 const showImage = ref(false);
+const store = ref(getStore())
 
 async function handleSubmit() {
-  dataUrl.value = await makeQrCode(inputText.value)
+  const url = await makeQrCode(inputText.value)
+  dataUrl.value = url
+  saveItem(store.value, {
+    dataURL: url,
+    value: inputText.value,
+    createdDate: Date.now()
+  });
   showImage.value = true;
   codeText.value = inputText.value;
   inputText.value = "";
