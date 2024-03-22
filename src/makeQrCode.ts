@@ -11,7 +11,7 @@ const DEFAULT_OPTIONS: QRCodeToDataURLOptions = {
     dark: undefined,
   },
   rendererOpts: {
-    quality: 1,
+    quality: undefined,
   }
 };
 
